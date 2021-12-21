@@ -1,0 +1,465 @@
+@import url('https://fonts.googleapis.com/css2?family=Dosis:wght@200&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Marcellus+SC&display=swap');
+*{
+    margin: 0;
+    padding: 0;
+}
+body{
+    margin:0;
+    background-color: rgb(190,215,201);
+   // position:fixed;
+    width:100%;
+}
+
+nav {
+    /*margin: -0.7vw;*/
+    display: none;
+    width: 100%;
+    display: flex;
+    justify-content: space-around;
+    height: 3.8vw;
+    z-index: 1;
+
+}
+
+    nav h3 {
+        color: black;
+        letter-spacing: -0.02em;
+        font-family: 'Marcellus SC', serif;
+        font-size: 3vw;
+        z-index: 1;
+        background: 50% 100% / 50% 50% no-repeat radial-gradient(ellipse at bottom, deeppink, #00BFCB, transparent);
+        background-clip: text;
+        -webkit-background-clip: text;
+        color: transparent;
+        animation: reveal 3000ms ease-in-out forwards 100ms, glow 2500ms linear infinite 2000ms;
+    }
+
+@keyframes reveal {
+    80% {
+        letter-spacing: 1.1vw;
+    }
+
+    100% {
+        background-size: 300% 300%;
+    }
+}
+
+@keyframes glow {
+    40% {
+        text-shadow: 0 0 1.16vw #1BEEFC;
+        ;
+    }
+}
+
+nav h3:hover {
+    cursor: default;
+}
+
+#nav-links {
+    color: #fff;
+    letter-spacing: -0.02em;
+    font-family: 'Dosis', sans-serif;
+    position: relative;
+    font-size: 2vw;
+    display: flex;
+    margin-top: 0.4vw;
+    padding: 0;
+    justify-content: space-around;
+    width: 50%;
+    height: 80%;
+}
+
+    #nav-links li {
+        margin: 0;
+        list-style: none;
+    }
+
+        #nav-links li a {
+            color: rgb(255, 255, 255);
+            letter-spacing: 0.4vw;
+            font-weight: bold;
+            font-size: 1.867vw;
+            text-decoration: none;
+        }
+
+            #nav-links li a:hover {
+                animation: fade3 1.2s;
+                color: deeppink;
+                border-bottom: solid deeppink 0.1vw;
+            }
+
+@keyframes fade3 {
+    0% {
+        color: rgb(255, 255, 255);
+    }
+
+    ;50% {
+        color: rgb(94, 68, 86);
+    }
+
+    ; 80% {
+        color: rgb(59, 36, 52);
+    }
+
+    ;
+}
+/*dropdowns*/
+#nav-links li ul {
+    margin: 0.9vw 0vw 0vw -2%;
+    display: none;
+    line-height: 3.5vw;
+    text-align: center;
+    position: absolute;
+    background: linear-gradient(180deg, #706874 0%, rgba(73, 68, 67, 0.77) 100%);
+    border-radius: 0vw 0vw 0.267vw 0.267vw;
+}
+
+#nav-links li:nth-child(2) ul {
+    width: 7vw;
+    height: 11.3vw;
+}
+
+#nav-links li:nth-child(3) ul {
+    width: 17.333vw;
+    height: 11.92vw;
+    margin-left: -2.2%;
+}
+
+#nav-links li:hover ul {
+    display: block;
+    z-index: 99;
+}
+
+#nav-links li ul li a {
+    font-size: 1.1vw;
+    border-radius: 0vw 0vw 0.267vw 0.267vw;
+    padding: 0.8vw 8%;
+    margin-top: 0%;
+    justify-content: center;
+    text-align: center;
+    line-height: 0.107vw;
+    color: rgb(0, 0, 0);
+}
+
+#nav-links li:nth-child(3) ul li a {
+    padding: 0.8vw 24%;
+    margin-top: 0%;
+    line-height: 0.107vw;
+}
+
+#nav-links li ul li a:hover {
+    border-top: solid #fff 0.14vw;
+    border-bottom: solid #fff 0.14vw;
+    background-color: rgba(156, 156, 156, 0.205);
+    color: #fff;
+}
+
+@media screen and (max-width: 600px) {
+    #nav-links {
+        width: 74%;
+    }
+}
+
+nav h3:hover {
+    cursor: default;
+}
+/**/
+/*chosen nav li*/
+#nav-links li:nth-child(4) .ch {
+    color: aqua;
+    animation: none;
+    padding: 0;
+    cursor: default;
+    text-align: center;
+    margin: 0;
+    border-bottom: solid aqua 0.1vw;
+}
+
+.searchdiv{
+position:relative;
+   margin-left: 27%;
+}
+table,th,td {
+  //border : 1px solid black;
+  //border-collapse: collapse;
+}
+
+th,td {
+  padding: 5px;
+}
+#add_div {
+   // display:none;
+    width: auto;
+    background-color:black;color:white;
+    text-align: center;
+}
+#pandas {
+    text-align: center;
+    //border: 1px solid black;
+    width: 100%;
+}
+#here{
+    font-size:40px;
+    z-index:1;
+}
+
+
+
+/****************************************************************************************************pictures*************/
+@import url('https://fonts.googleapis.com/css?family=Lobster&display=swap') repeat scroll 0 0 rgba(0, 0, 0, 0);
+
+body {
+    background: #fff;
+    margin:0;padding:0;background:black;
+    overflow:hidden;
+}
+
+.title {
+    font-size: 2.5rem;
+    font-family: 'Lobster', cursive;
+}
+
+.wrapper {
+    margin:0;
+    animation: scroll 70s linear infinite;
+    background: url("bpi.jpg"), black;
+    background-size: 40%;
+    background-repeat: repeat-y;
+    color: #eee;
+    height: 100vh;
+    min-width: 360px;
+    width: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    perspective: 1000px;
+    perspective-origin: 50% 50%;
+}
+
+@keyframes scroll {
+    100% {
+        background-position: 0px -3000px;
+    }
+}
+
+@media (prefers-reduced-motion) {
+    .wrapper {
+        animation: scroll 200s linear infinite;
+    }
+}
+
+@media (min-width: 670px) {
+    .title {
+        font-size: 5rem;
+    }
+}
+/****************************************************************************************************ENDpictures*************/
+
+#body2 {
+    display: block;
+
+    text-align: center;
+    width: 100%;
+    height: 100%;z-index:1;
+}
+#body2 #hds{
+    background-color:rebeccapurple;
+    margin-left:3%;
+}
+#body2 h1 {
+    letter-spacing: 0.09em;
+    font-size: 1.4vw;
+    color: white;
+    text-shadow: 1px 1px 26px #00e1ff;
+    margin:42px 0 0 -39%;
+    padding-left:0;
+    font-family: 'Marcellus SC', serif;
+    font-weight: lighter;
+}
+#tableform {
+    margin-left: 58%;
+    letter-spacing: 0.04em;
+    font-family: 'Dosis', sans-serif;
+    font-size: 18px;
+    font-weight: bold;
+    display: flex;
+    color: white;
+}
+
+    #tableform div {
+        margin-left: 9px;
+    }
+
+    #tableform input, #tableform select {
+        border-radius: 9px;
+        border: none;
+    }
+
+#apply {
+margin-left: 9px;
+width: 100px;
+padding: 4px 9px;
+border-radius: 19px;
+background: none;
+letter-spacing: 0.08em;
+font-family: 'Dosis', sans-serif;
+border: 2px solid cyan;
+border-radius: 5%;
+color: white;
+}
+#apply:hover {
+background-color: cyan;
+
+cursor: pointer;
+color: black;
+}
+
+.pagination {
+    margin-left: 39%;
+}
+
+.pagination a {
+color: white;
+padding: 3px 12px;
+display: inline-block;
+margin: 12px;
+text-decoration: none;
+border-radius: 50%;
+}
+
+.pagination a:hover {
+    color: cyan;
+    border: 2px solid cyan;
+}
+
+.pagination a.active {
+
+    border: 2px solid cyan ;
+    border-radius: 50%;
+    text-decoration: none;
+    color: cyan;
+}
+#userTab {
+    width: 40%;
+    font-size: 1.4vw;
+    margin-left: 50%;
+    box-shadow: 0px 0px 3px 3px #fff;
+    margin-right: 40%;
+}
+#userTab table {
+    color: white;
+    letter-spacing: 0.04em;
+    font-family: 'Dosis', sans-serif;
+}
+#userTab table td {
+    text-align:center;
+}
+#userTab table #imt{
+    width:20%;
+    background-color:pink;
+}
+#userTab table #imt img{
+    width: 100%;
+      height:100%; 
+}
+#tableName {
+    letter-spacing: 0.06em;
+    font-size: 1.6vw;
+    color: white;
+    width: 40%;
+    margin: 30px 0 0 50%;
+    text-align: end;
+    text-shadow: 1px 1px 26px #00e1ff;
+    padding-left: 0;
+    color: deeppink;
+    letter-spacing: -0.04em;
+    font-family: 'Dosis', sans-serif;
+    font-weight: bold;
+}
+#us_Add {
+    position: absolute;
+    color: deeppink;
+    background-color: none;
+    padding: 3px 7px;
+    font-family: 'Dosis', sans-serif;
+    letter-spacing: -0.04em;
+    border: inset 0px 0px 3px 3px deepink;
+    margin: 1% 0 0 37.6%;
+    background: none;
+    letter-spacing: 0.08em;
+    font-family: 'Dosis', sans-serif;
+    border: 2px solid cyan;
+    border-radius: 5%;
+    color: white;
+}
+
+#us_Add:hover {
+    background-color: cyan;
+    cursor: pointer;
+    color: black;
+}
+#al {
+    margin-left: -90%;
+    font-family: 'Dosis', sans-serif;
+    letter-spacing: -0.04em;
+    color: dimgray;
+    text-decoration: none;
+}
+#add_div {
+    width: 40%;
+    font-size: 1.4vw;
+    margin-left: 50%;
+    //margin-top:10%;
+    margin-right: 40%;
+}
+#form {
+    text-align: end;
+    font-family: 'Dosis', sans-serif;
+    letter-spacing: 0.04em;
+    color: white;
+    font-size: 1.4vw;
+    text-decoration: none;
+    line-height: 30px;
+}#gh{
+     text-align:start;
+     line-height:31px;
+    
+ }
+#form div
+
+{
+    /*background-color:antiquewhite;*/
+    width: fit-content;
+    border-radius: 6px;
+    font-family: 'Dosis', sans-serif;
+    font-size: 1.1vw;
+
+
+    letter-spacing: 0.04em;
+}
+
+#form input {
+    border-radius: 6px;
+    width:180px;
+    box-shadow: inset 0px 0px 50px 22px #FFFFFF;
+}
+
+#donr {
+    margin-left: 9px;
+    width: 100px;
+    padding: 4px 9px;
+    border-radius: 19px;
+    background: none;
+    letter-spacing: 0.08em;
+    font-family: 'Dosis', sans-serif;
+    border: 2px solid cyan;
+    border-radius: 5%;
+    color: white;
+}
+
+    #donr:hover {
+        background-color: cyan;
+        cursor: pointer;
+        color: black;
+    }

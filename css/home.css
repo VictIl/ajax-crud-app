@@ -1,0 +1,700 @@
+@import url('https://fonts.googleapis.com/css2?family=Dosis:wght@200&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Marcellus+SC&display=swap');
+/**/
+/*Navbar*/
+
+/*for every page*/
+* {
+    margin: 0;
+    padding: 0;
+}
+
+body {
+    overflow: hidden;
+    background-color: dimgray;
+}
+
+nav {
+    margin: -0.7vw;
+    display: none;
+    width: 100%;
+    display: flex;
+    justify-content: space-around;
+    height: 3.8vw;
+    background-color: black;
+}
+
+    nav h3 {
+        color: black;
+        letter-spacing: -0.02em;
+        font-family: 'Marcellus SC', serif;
+        font-size: 3vw;
+        z-index: 1;
+        background: 50% 100% / 50% 50% no-repeat radial-gradient(ellipse at bottom, #fff, rgba(255, 255, 255, 0.582), transparent);
+        background-clip: text;
+        -webkit-background-clip: text;
+        color: transparent;
+        animation: reveal 3000ms ease-in-out forwards 100ms, glow 2500ms linear infinite 2000ms;
+    }
+
+@keyframes reveal {
+    80% {
+        letter-spacing: 1.1vw;
+    }
+
+    100% {
+        background-size: 300% 300%;
+    }
+}
+
+@keyframes glow {
+    40% {
+        text-shadow: 0 0 1.16vw cyan;
+    }
+}
+
+nav h3:hover {
+    cursor: default;
+}
+
+#nav-links {
+    color: #fff;
+    letter-spacing: -0.02em;
+    font-family: 'Dosis', sans-serif;
+    position: relative;
+    font-size: 2vw;
+    display: flex;
+    margin-top: 0.4vw;
+    padding: 0;
+    justify-content: space-around;
+    width: 50%;
+    height: 80%;
+}
+
+    #nav-links li {
+        margin: 0;
+        list-style: none;
+    }
+
+        #nav-links li a {
+            color: rgb(255, 255, 255);
+            letter-spacing: 0.4vw;
+            font-weight: bold;
+            font-size: 1.867vw;
+            text-decoration: none;
+        }
+
+            #nav-links li a:hover {
+                animation: fade3 1.2s;
+                color: deeppink;
+                border-bottom: solid deeppink 0.1vw;
+            }
+
+@keyframes fade3 {
+    0% {
+        color: rgb(255, 255, 255);
+    }
+
+    ;50% {
+        color: rgb(94, 68, 86);
+    }
+
+    ; 80% {
+        color: rgb(59, 36, 52);
+    }
+
+    ;
+}
+/*dropdowns*/
+#nav-links li ul {
+    margin: 0.9vw 0vw 0vw -2%;
+    display: none;
+    line-height: 3.5vw;
+    text-align: center;
+    position: absolute;
+    background: linear-gradient(180deg, #706874 0%, rgba(73, 68, 67, 0.77) 100%);
+    border-radius: 0vw 0vw 0.267vw 0.267vw;
+}
+
+#nav-links li:nth-child(2) ul {
+    width: 7vw;
+    height: 11.3vw;
+}
+
+#nav-links li:nth-child(3) ul {
+    width: 17.333vw;
+    height: 11.92vw;
+    margin-left: -2.2%;
+}
+
+#nav-links li:hover ul {
+    display: block;
+    z-index: 99;
+}
+
+#nav-links li ul li a {
+    font-size: 1.1vw;
+    border-radius: 0vw 0vw 0.267vw 0.267vw;
+    padding: 0.8vw 8%;
+    margin-top: 0%;
+    justify-content: center;
+    text-align: center;
+    line-height: 0.107vw;
+    color: rgb(0, 0, 0);
+}
+
+#nav-links li:nth-child(3) ul li a {
+    padding: 0.8vw 24%;
+    margin-top: 0%;
+    line-height: 0.107vw;
+}
+
+#nav-links li ul li a:hover {
+    border-top: solid #fff 0.14vw;
+    border-bottom: solid #fff 0.14vw;
+    background-color: rgba(156, 156, 156, 0.205);
+    color: #fff;
+}
+
+@media screen and (max-width: 600px) {
+    #nav-links {
+        width: 74%;
+    }
+}
+
+nav h3:hover {
+    cursor: default;
+}
+/**/
+/*chosen nav li*/
+#nav-links li:nth-child(1) .ch {
+    color: #00e1ff;
+    animation: none;
+    padding: 0;
+    cursor: default;
+    text-align: center;
+    margin: 0;
+    border-bottom: solid #00e1ff 0.1vw;
+}
+
+table, th, td {
+    border: 1px solid black;
+    border-collapse: collapse;
+}
+
+#txtHint {
+    /*opacity:40%;*/
+    opacity: 0.2;
+}
+
+#first_on_main {
+    position: absolute;
+    color: red;
+}
+
+#second_on_main {
+    position: absolute;
+    color: blue;
+}
+
+#vertical_three {
+    z-index: 0;
+    position: absolute;
+    background-color: deeppink;
+    top: 0;
+    margin-left: 80%;
+    margin-top: 24.8%;
+    width: 20%;
+    box-shadow: 0px 0px 70px 10px deeppink;
+    height: 2px;
+}
+
+#vertical_four {
+    z-index: 0;
+    position: absolute;
+    background-color: deeppink;
+    top: 0;
+    margin-left: 0%;
+    margin-top: 10.8%;
+    width: 90%;
+    box-shadow: 0px 0px 30px 6px deeppink;
+    height: 0.2px;
+}
+
+#vertical_five {
+    z-index: 0;
+    position: absolute;
+    background-color: #00e1ff;
+    top: 0;
+    margin-left: 53.2%;
+    width: 0.2px;
+    box-shadow: 0px 0px 20px 4px #00e1ff;
+    height: 100%;
+}
+
+
+
+#txtHint {
+    opacity: 1;
+    display: block;
+    animation: fadeInFromNone 5s ease-out;
+}
+
+@-webkit-keyframes fadeInFromNone {
+    0% {
+        display: none;
+        opacity: 0;
+    }
+
+    1% {
+        display: block;
+        opacity: 0;
+    }
+
+    100% {
+        display: block;
+        opacity: 1;
+    }
+}
+
+@-moz-keyframes fadeInFromNone {
+    0% {
+        display: none;
+        opacity: 0;
+    }
+
+    1% {
+        display: block;
+        opacity: 0;
+    }
+
+    100% {
+        display: block;
+        opacity: 1;
+    }
+}
+
+@-o-keyframes fadeInFromNone {
+    0% {
+        display: none;
+        opacity: 0;
+    }
+
+    1% {
+        display: block;
+        opacity: 0;
+    }
+
+    100% {
+        display: block;
+        opacity: 1;
+    }
+}
+
+@keyframes fadeInFromNone {
+    0% {
+        display: none;
+        opacity: 0;
+    }
+
+    1% {
+        display: block;
+        opacity: 0;
+    }
+
+    100% {
+        display: block;
+        opacity: 1;
+    }
+}
+
+/*////////////////////////////////////////////////////////////////////////////////////////////////////////////*/
+#mainb {
+    z-index: 1;
+}
+
+#tired {
+    -webkit-box-reflect: below 1px linear-gradient(transition, #0005)
+}
+
+.animation1 {
+    position: relative;
+    margin-top: -4vw;
+    display: flex;
+    align-items: center;
+    margin-left: 3%;
+    width: 50%;
+}
+
+    .animation1 div:nth-child(1) {
+        background-color: bisque;
+        position: relative;
+        width: 47%;
+        text-align: center;
+        background: rgba(223, 219, 219, 0.89);
+        background: black;
+        height: 17vw;
+    }
+
+        .animation1 div:nth-child(1):before,
+        .animation1 div:nth-child(1)::after {
+            content: '';
+            position: absolute;
+            top: -0.267vw;
+            left: -0.267vw;
+            border-radius: 0.3vw;
+            background: linear-gradient(90deg,#c90c5b,#eeff00,#00ffea,#00e1ff);
+            width: calc(100% + 0.533vw);
+            background-size: 400%;
+            height: calc(100% + 0.533vw);
+            z-index: -1;
+            animation: ann 20s linear infinite;
+        }
+
+        .animation1 div:nth-child(1):after {
+            filter: blur(0.667vw);
+        }
+
+@keyframes ann {
+    0% {
+        background-position: 0 0;
+    }
+
+    50% {
+        background-position: 300% 0;
+    }
+
+    100% {
+        background-position: 0 0;
+    }
+}
+
+
+.animation1 div:nth-child(1) div {
+    position: relative;
+    width: 100%;
+    padding: 0%;
+    margin: 0;
+    margin: 0% 0%;
+    height: 100%;
+}
+
+.animation1 div:nth-child(2) div {
+    position: relative;
+    width: 16%;
+    padding: 0%;
+    margin: 0;
+    margin: 0% 0%;
+    height: 100%;
+}
+
+.animation1 div:nth-child(1) div div {
+    width: 100%;
+    position: absolute;
+    overflow: hidden;
+    animation: cute4 80s infinite;
+    opacity: 0;
+    margin: 0%;
+    height: 100%;
+}
+
+    .animation1 div:nth-child(1) div div img {
+        width: 100%;
+        border-radius: 0.3vw;
+        height: 100%;
+    }
+
+@keyframes cute4 {
+    2% {
+        opacity: 1;
+    }
+
+    12% {
+        opacity: 1;
+    }
+
+    12.5% {
+        opacity: 0;
+    }
+}
+
+.animation1 div:nth-child(1) div div:nth-child(1) {
+    animation-delay: 0s;
+}
+
+.animation1 div:nth-child(1) div div:nth-child(2) {
+    animation-delay: 10s;
+}
+
+.animation1 div:nth-child(1) div div:nth-child(3) {
+    animation-delay: 20s;
+}
+
+.animation1 div:nth-child(1) div div:nth-child(4) {
+    animation-delay: 30s;
+}
+
+.animation1 div:nth-child(1) div div:nth-child(5) {
+    animation-delay: 40s;
+}
+
+.animation1 div:nth-child(1) div div:nth-child(6) {
+    animation-delay: 50s;
+}
+
+.animation1 div:nth-child(1) div div:nth-child(7) {
+    animation-delay: 60s;
+}
+
+.animation1 div:nth-child(1) div div:nth-child(8) {
+    animation-delay: 70s;
+}
+/*///////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////*/
+
+.animation2 {
+    position: relative;
+    margin-top: -32vw;
+    display: flex;
+    align-items: center;
+    z-index: 0;
+    margin-left: 73%;
+    width: 40%;
+}
+
+    .animation2 div:nth-child(1) {
+        background-color: bisque;
+        position: relative;
+        width: 47%;
+        text-align: center;
+        background: rgba(223, 219, 219, 0.89);
+        background: black;
+        height: 22vw;
+    }
+
+        .animation2 div:nth-child(1):before,
+        .animation2 div:nth-child(1)::after {
+            content: '';
+            position: absolute;
+            top: -0.267vw;
+            left: -0.267vw;
+            border-radius: 0.4vw;
+            background: linear-gradient(45deg,#00ff4c,#25e6ff,#ff06d6,#430063);
+            width: calc(100% + 0.533vw);
+            background-size: 400%;
+            height: calc(100% + 0.533vw);
+            z-index: -1;
+            animation: ann 20s linear infinite;
+        }
+
+        .animation2 div:nth-child(1):after {
+            filter: blur(0.667vw);
+        }
+
+@keyframes ann {
+    0% {
+        background-position: 0 0;
+    }
+
+    50% {
+        background-position: 300% 0;
+    }
+
+    100% {
+        background-position: 0 0;
+    }
+}
+
+
+.animation2 div:nth-child(1) div {
+    position: relative;
+    width: 100%;
+    padding: 0%;
+    margin: 0;
+    margin: 0% 0%;
+    height: 100%;
+}
+
+.animation2 div:nth-child(2) div {
+    position: relative;
+    width: 16%;
+    padding: 0%;
+    margin: 0;
+    margin: 0% 0%;
+    height: 100%;
+}
+
+.animation2 div:nth-child(1) div div {
+    width: 100%;
+    position: absolute;
+    overflow: hidden;
+    animation: cute4 80s infinite;
+    opacity: 0;
+    margin: 0%;
+    height: 100%;
+}
+
+    .animation2 div:nth-child(1) div div img {
+        width: 100%;
+        border-radius: 0.3vw;
+        height: 100%;
+    }
+
+@keyframes cute4 {
+    2% {
+        opacity: 1;
+    }
+
+    12% {
+        opacity: 1;
+    }
+
+    12.5% {
+        opacity: 0;
+    }
+}
+
+.animation2 div:nth-child(1) div div:nth-child(1) {
+    animation-delay: 0s;
+}
+
+.animation2 div:nth-child(1) div div:nth-child(2) {
+    animation-delay: 10s;
+}
+
+.animation2 div:nth-child(1) div div:nth-child(3) {
+    animation-delay: 20s;
+}
+
+.animation2 div:nth-child(1) div div:nth-child(4) {
+    animation-delay: 30s;
+}
+
+.animation2 div:nth-child(1) div div:nth-child(5) {
+    animation-delay: 40s;
+}
+
+.animation2 div:nth-child(1) div div:nth-child(6) {
+    animation-delay: 50s;
+}
+
+.animation2 div:nth-child(1) div div:nth-child(7) {
+    animation-delay: 60s;
+}
+
+.animation2 div:nth-child(1) div div:nth-child(8) {
+    animation-delay: 70s;
+}
+
+
+/*////////////////////////////////////////////////////////////////////////////////*/
+
+
+
+/* button*/
+#mainb {
+    margin: 18% 0 0 43%;
+    position: relative;
+    display: inline-block;
+    padding: 1.8vw 4vw;
+    color: #03e9f4;
+    text-decoration: none;
+    text-transform: uppercase;
+    transition: 0.5s;
+    overflow: hidden;
+}
+
+    #mainb:hover {
+        background: #03e9f4;
+        color: #050801;
+        color: white;
+        -webkit-box-reflect: below 1px linear-gradient(transition, #0005)
+    }
+
+
+    #mainb:nth-child(2) {
+        filter: hue-rotate(270deg);
+    }
+
+    #mainb span {
+        position: absolute;
+        display: block;
+    }
+
+        #mainb span:nth-child(1) {
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 2px;
+            background: linear-gradient(90deg,transparent,#03e9f4);
+            animation: animate1 1s linear infinite;
+        }
+
+@keyframes animate1 {
+    0% {
+        left: -100%;
+    }
+
+    50%,100% {
+        left: 100%;
+    }
+}
+
+#mainb span:nth-child(2) {
+    top: -100%;
+    right: 0;
+    width: 2px;
+    height: 100%;
+    background: linear-gradient(180deg,transparent,#03e9f4);
+    animation: animate2 1s linear infinite;
+    animation-delay: 1s;
+}
+
+@keyframes animate2 {
+    0% {
+        top: -100%;
+    }
+
+    50%,100% {
+        top: 100%;
+    }
+}
+
+
+#mainb span:nth-child(3) {
+    bottom: 0;
+    right: 0;
+    width: 100%;
+    height: 2px;
+    background: linear-gradient(270deg,transparent,#03e9f4);
+    animation: animate3 1s linear infinite;
+}
+
+@keyframes animate3 {
+    0% {
+        right: -100%;
+    }
+
+    50%,100% {
+        right: 100%;
+    }
+}
+
+#mainb span:nth-child(4) {
+    bottom: -100%;
+    left: 0;
+    width: 0.267vw;
+    height: 100%;
+    background: linear-gradient(360deg,transparent,#03e9f4);
+    animation: animate4 1s linear infinite;
+    animation-delay: 1s;
+}
+
+@keyframes animate4 {
+    0% {
+        bottom: -100%;
+    }
+
+    50%,100% {
+        bottom: 100%;
+    }
+}
